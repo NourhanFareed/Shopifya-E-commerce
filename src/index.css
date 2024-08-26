@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.active {
+    @apply font-bold bg-transparent text-[#240253] underline underline-offset-8 decoration-2;
+}
+
+
+
+.scrolled {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+
+
+
+
+
+/* ?======= Login & Register Page ======= */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    /* background-color: #171717; */
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+}
+
+/* .form:hover {
+    border: 1px solid black;
+   
+} */
+
+#heading {
+    text-align: center;
+    /* margin: 2em; */
+    /* font-size: 1.2em; */
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    /* margin: 0.6em; */
+    border: none;
+    outline: none;
+    color: white;
+    /* background-color: white ; */
+    /* box-shadow: inset 2px 5px 10px rgb(5, 5, 5); */
+}
+
+.input-icon {
+    height: 1.5em;
+    width: 1.5em;
+    /* fill: white; */
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+}
+
+.input-field:focus {
+    border: 1px solid #0e0e0f !important;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+
+.button1 {
+    /* padding: 0.5em; */
+    /* padding-left: 1.1em; */
+    /* padding-right: 1.1em; */
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: white;
+    color: black;
+}
+
+.button1:hover {
+    background-color: black;
+    color: white;
+}
+
+.button2 {
+    /*padding: 1.1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.dark {
+    background-color: #111827;
+}
+
+
+/* ?======= Login & Register Page ======= */
+
+/* *============= Home Page ================ */
+
+
+/* Add to Cart btn */
+/* From Uiverse.io by vinodjangid07 */
+.CartBtn {
+    width: 140px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: rgb(17, 17, 17); */
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+    transform: translateX(50px);
+    border-radius: 40px;
+    transition-duration: .5s;
+    -webkit-transform: translateX(50px);
+    -moz-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    -o-transform: translateX(50px);
+}
+
+.CartBtn:hover .text {
+    transform: translate(12px, 0px);
+    transition-duration: .5s;
+    -webkit-transform: translate(12px, 0px);
+    -moz-transform: translate(12px, 0px);
+    -ms-transform: translate(12px, 0px);
+    -o-transform: translate(12px, 0px);
+}
+
+.CartBtn:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+
+/* *============= Home Page ================ */
+
+
+/* ^================ ProductsDetails =================== */
+
+.size {
+    font-size: 0.75rem;
+    /* color: #d9d9d9; */
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.list-size {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    margin-top: 0.25rem;
+}
+
+.list-size .item-list {
+    list-style: none;
+}
+
+.list-size .item-list-button {
+    cursor: pointer;
+
+    padding: 0.5rem;
+    background-color: #18181b;
+
+    font-size: 0.75rem;
+    color: #d9d9d9;
+
+    border: 2px solid #18181b;
+    border-radius: 0.25rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.item-list-button:hover {
+    border: 2px solid #d9d9d9;
+}
+
+.item-list-button:focus {
+    background-color: #d9d9d9;
+    color: black;
+    border: 2px solid black;
+
+    box-shadow: inset 0px 1px 4px #0e0e0f;
+}
+
+/* ------------------- */
+/* From Uiverse.io by Julian956 */
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    /* border: none; */
+    background-color: transparent;
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+}
+
+.icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+}
+
+.icon-cart path {
+    fill: rgb(240, 8, 8);
+    transition: .2s linear;
+}
+
+.btn-cart:hover>.icon-cart {
+    transform: scale(1.2);
+}
+
+.btn-cart:hover>.icon-cart path {
+    fill: rgb(186, 34, 233);
+}
+
+.btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+}
+
+.quantity {
+    display: none;
+}
+
+/* ^================ ProductsDetails =================== */

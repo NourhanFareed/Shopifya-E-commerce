@@ -1,0 +1,154 @@
+/* ?===================== */
+
+
+/* .dark {
+    background-color: #333 !important;
+} */
+
+
+
+:where(.navbar > *:not(script, style)) {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.navBarEnd {
+    width: 50% !important;
+    justify-content: flex-end !important;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+
+/* ^========================== */
+/* From Uiverse.io by satyamchaudharydev */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+/* .form button {
+    border: 2px solid;
+    padding: 8px;
+    background: none;
+    color: #8b8ba7;
+} */
+
+/* styling of whole input container */
+.form {
+    --timing: 0.3s;
+    --width-of-input: 300px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    background-color: transparent !important;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+    margin-left: 10px;
+}
+
+/* styling of Input */
+.inputSearch {
+    font-size: 0.9rem;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    color: #240253;
+}
+
+/* styling of animated border */
+.form:before {
+    content: "";
+    position: absolute;
+    background: #240253;
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100% !important;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+.inputSearch:focus {
+    outline: none !important;
+    width: 100% !important;
+    border: none !important;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+    border: none;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    right: 0;
+
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 30000000000000000000;
+}
+
+/* sizing svg icons */
+.form svg {
+    width: 30px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width:992px) {
+
+    .form {
+        display: none !important;
+    }
+
+    .inputSearch {
+        width: 100% !important;
+        visibility: hidden !important;
+
+    }
+
+    .form:before {
+        background: none;
+    }
+
+    .navbar-center {
+        justify-content: flex-start !important;
+    }
+}
+
+/* ?===================== */
