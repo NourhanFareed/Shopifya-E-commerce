@@ -62,7 +62,7 @@ export default function Cart() {
                         <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3 me-8 xs:mx-auto dark:bg-dark dark:shadow-2xl" >
                             <div className="mb-2 flex justify-between">
                                 <p className="text-gray-900 dark:text-white font-bold">Subtotal</p>
-                                <p className="text-gray-900 dark:text-white font-bold">EGP {cartProducts?.totalCartPrice}</p>
+                                <p className="text-gray-900 dark:text-white font-bold">EGP {cartProducts?.data.totalCartPrice}</p>
                             </div>
                             <div className="flex justify-between">
                                 <p className="text-gray-900 dark:text-white font-bold">Shipping</p>
@@ -72,7 +72,7 @@ export default function Cart() {
                             <div className="flex justify-between">
                                 <p className="text-lg font-bold text-gray-900 dark:text-white">Total</p>
                                 <div className>
-                                    <p className="mb-1 text-center text-lg font-bold text-gray-900 dark:text-white">EGP {cartProducts?.totalCartPrice + 5.00}</p>
+                                    <p className="mb-1 text-center text-lg font-bold text-gray-900 dark:text-white">EGP {cartProducts?.data.totalCartPrice + 5.00}</p>
                                     <p className="text-sm text-gray-900 dark:text-white font-bold">including VAT</p>
                                 </div>
                             </div>
