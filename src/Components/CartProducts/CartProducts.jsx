@@ -74,7 +74,8 @@ export default function CartProducts({ product, index }) {
             <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                 <div className="mt-5 sm:mt-0">
                     <h2 className="mt-3 text-lg font-bold text-[#240253] dark:text-white">{product.product.title}</h2>
-                    <p className="mt-3 text-lg text-gray-900 dark:text-white">EGP {product.price}</p>
+                    <p className="mt-3 text-lg text-gray-900 dark:text-white">
+                        <span className="font-semibold">EGP</span> {product.price}</p>
                 </div>
                 <div className="mt-14 flex justify-between flex-col items-end sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
 
