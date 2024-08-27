@@ -16,7 +16,7 @@ export default function Cart() {
 
     const { cartProducts, cartProductsCounter, clearCart, isLoading } = useCart()
 
-    // console.log(cartProducts);
+    console.log(cartProducts.data);
 
 
 
@@ -76,7 +76,7 @@ export default function Cart() {
                                     <p className="text-sm text-gray-900 dark:text-white font-bold">including VAT</p>
                                 </div>
                             </div>
-                            <Link to={"/shippingAddress/" + cartProducts?.data._id}><button className="mt-6 w-full rounded-md bg-blue-500 dark:bg-[#003783] dark:hover:bg-[#0061a5] py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button></Link>
+                            <Link to={"/shippingAddress/" + cartProducts?.cartId}><button className="mt-6 w-full rounded-md bg-blue-500 dark:bg-[#003783] dark:hover:bg-[#0061a5] py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button></Link>
                         </div>
                     </div>
                     <ScrollingUpIcon />
