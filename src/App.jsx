@@ -25,7 +25,7 @@ import ContactUs from './Components/ContactUs/ContactUs'
 import ClientsReviews from './Components/ClientsReviews/ClientsReviews'
 import VerifyCodePage from './Components/VerifyCodePage/VerifyCodePage'
 import { WishlistProvider } from './Context/wishlistContext'
-import { Offline } from 'react-detect-offline'
+// import { Offline } from 'react-detect-offline'
 import { CartProvider } from './Context/CartContext'
 import OffersDetails from './Components/Offers/OffersDetails'
 
@@ -69,9 +69,9 @@ function App() {
         <WishlistProvider>
           <CartProvider>
             <RouterProvider router={router}></RouterProvider>
-            <div className="fixed bg-[#7c005b] dark:bg-[#003783] text-white start-2 bottom-2 rounded-lg">
+            {/* <div className="fixed bg-[#7c005b] dark:bg-[#003783] text-white start-2 bottom-2 rounded-lg">
               <Offline>You are offline</Offline>
-            </div>
+            </div> */}
           </CartProvider>
 
         </WishlistProvider>
