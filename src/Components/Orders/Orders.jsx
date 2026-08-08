@@ -29,7 +29,6 @@ export default function Orders() {
 
         // Output: October 1, 2024
 
-
     }, [])
 
 

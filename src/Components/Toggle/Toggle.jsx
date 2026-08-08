@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 
 export default function Toggle({ scrollNav }) {

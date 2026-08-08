@@ -1,6 +1,5 @@
 import sneakers from "../../assets/images/sneakers.png"
 
-
 export default function Banner4() {
     return (
         <>

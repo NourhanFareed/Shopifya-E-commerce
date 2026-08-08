@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import Slider from "react-slick";
 import style from "../MoreProducts/MoreProducts.module.css";
 import { Link } from "react-router-dom";
@@ -65,8 +63,6 @@ export default function MoreProducts({ products }) {
         ]
     };
     return (
-
-
         <div className="mt-16">
             <h2 className="text-center text-3xl font-bold mb-9 text-[#240253] dark:text-white">More Products</h2>
             <div className="slider-container md:mx-16 px-16 gap-20">
@@ -91,10 +87,5 @@ export default function MoreProducts({ products }) {
                 </Slider>
             </div>
         </div>
-
-
-
-
-
     )
 }

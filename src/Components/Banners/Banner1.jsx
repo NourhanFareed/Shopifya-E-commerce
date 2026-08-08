@@ -1,4 +1,3 @@
-
 import speaker from "../../assets/images/Rectangle-56-1.png"
 import playstation from "../../assets/images/Rectangle-59-1.png"
 

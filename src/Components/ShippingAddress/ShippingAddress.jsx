@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useState } from 'react';

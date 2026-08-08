@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
@@ -8,15 +7,12 @@ import ProductSlider from "../ProductSlider/ProductSlider";
 import MoreProducts from "../MoreProducts/MoreProducts";
 import { useWishList } from "../../Context/wishlistContext";
 import { useCart } from "../../Context/CartContext";
-// import CardDesign from "../CardDesign/CardDesign";
-// import style from "./ProductDetails.module.css"
-
 
 
 export default function ProductDetails() {
 
     let { id } = useParams()
-    console.log(id);
+    // console.log(id);
 
     const [productsDetails, setProductsDetails] = useState(null)
     const [relatedProducts, setRelatedProducts] = useState([])
@@ -24,14 +20,10 @@ export default function ProductDetails() {
     const { addProductToWishList } = useWishList()
     const { addProductToCart } = useCart()
 
-    // const [counter, setCounter] = useState(2)
-
     useEffect(() => {
         getProductsDetails()
 
     }, [id])
-
-
 
 
     async function getProductsDetails() {
@@ -138,9 +130,6 @@ export default function ProductDetails() {
                 </div>
 
             }
-
-
-
         </>
 
     )

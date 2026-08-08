@@ -7,10 +7,7 @@ import { AuthContext } from '../../Context/AuthContext';
 import style from "./ForgetPassword.module.css"
 import { Helmet } from 'react-helmet';
 
-
-
 export default function ForgetPasswords() {
-
 
     const [isLoading, setIsLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState("")
@@ -31,8 +28,6 @@ export default function ForgetPasswords() {
     });
     console.log("Hi!!!");
 
-
-
     async function onSubmit() {
         setErrorMsg("");
         setSuccussMsg("");
@@ -47,8 +42,6 @@ export default function ForgetPasswords() {
                 navigate("/verifyCode");
             }, 1000);
 
-
-
         }).catch((errors) => {
             setIsLoading(false);
             console.log(errors.response.data.message);
@@ -61,7 +54,6 @@ export default function ForgetPasswords() {
         initialValues,
         onSubmit,
         validationSchema
-
     });
 
     return (
@@ -107,11 +99,7 @@ export default function ForgetPasswords() {
 
             </div>
 
-
         </>
-
-
-
 
     )
 }

@@ -42,9 +42,6 @@ export default function SubCategories() {
                             </div>
                         </div>
                     })}
-
-
-
                 </div>}
         </>
     )

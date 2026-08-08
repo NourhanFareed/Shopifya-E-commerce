@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import { Link } from "react-router-dom"
 import LoadingScreen from "../LoadingScreen/LoadingScreen"
 import EmptyCart from "./EmptyCart"
@@ -7,18 +5,13 @@ import CartProducts from "../CartProducts/CartProducts"
 import ScrollingUpIcon from "../ScrollingUpIcon/ScrollingUpIcon"
 import { Helmet } from "react-helmet"
 import { useCart } from "../../Context/CartContext"
-// import { useState } from "react"
+
 
 
 
 export default function Cart() {
-    // const [isLoading, setIsLoading] = useState(true)
-
     const { cartProducts, cartProductsCounter, clearCart, isLoading } = useCart()
-
     console.log(cartProducts.data);
-
-
 
     if (cartProductsCounter === 0) {
         return <EmptyCart cart={cartProducts} />
@@ -31,7 +24,6 @@ export default function Cart() {
             </Helmet>
             {isLoading ? <LoadingScreen />
                 :
-
                 <div className="min-h-screen rounded-3xl xs:mx-8 -mt-12  lg:mx-14 pt-10 bg-body dark:bg-dark">
                     <h1 className="mb-10 text-center text-[#240253] dark:text-white text-2xl font-bold">Cart Items</h1>
                     <div className="flex justify-between items-center">
@@ -39,13 +31,10 @@ export default function Cart() {
                         <h1 onClick={() => clearCart()} className="text-left ms-6 mb-2 text-[#240253] dark:text-gray-50 font-semibold link-hover">Clear Cart</h1>
 
                     </div>
-
-
                     <div className="mx-auto rounded-3xl  bg-gray-100 justify-center items-start xs:px-3 md:px-4 py-8 md:flex md:space-x-6 lg:px-8 dark:border dark:bg-dark">
 
                         <div className="rounded-lg md:w-2/3 ms-1">
                             <>
-
                                 {cartProducts?.data.products.map((product, index) => {
                                     return <CartProducts key={index} product={product} />
                                 })}

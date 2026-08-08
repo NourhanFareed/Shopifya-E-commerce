@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useContext, useState } from 'react';
@@ -12,7 +11,6 @@ import { Helmet } from 'react-helmet';
 
 export default function VerifyCodePage() {
 
-
     const [isLoading, setIsLoading] = useState(false)
     const [errorMsg, setErrorMsg] = useState("")
     const [succussMsg, setSuccussMsg] = useState("")
@@ -21,8 +19,6 @@ export default function VerifyCodePage() {
 
     const initialValues = {
         resetCode: '',
-
-
     };
 
     const validationSchema = Yup.object({

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios"
 import { useEffect, useState } from "react"
 import CardDesign from "../CardDesign/CardDesign"
@@ -9,10 +8,7 @@ import Banners from "../Banners/Banners"
 import ContactUs from "../ContactUs/ContactUs"
 import ClientsReviews from "../ClientsReviews/ClientsReviews"
 import { Helmet } from "react-helmet"
-import Statistics from "../Statictics/Statictics"
-
-
-
+import Statistics from "../Statistics/Statistics"
 
 export default function Home() {
 
@@ -76,8 +72,6 @@ export default function Home() {
                 </div>}
 
         </>
-
-
     )
 }
 

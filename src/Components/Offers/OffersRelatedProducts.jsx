@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import Slider from "react-slick";
 import style from "../MoreProducts/MoreProducts.module.css";
 import { Link } from "react-router-dom";
@@ -92,10 +90,5 @@ export default function OffersRelatedProducts({ products }) {
                 </Slider>
             </div>
         </div>
-
-
-
-
-
     )
 }

@@ -1,14 +1,11 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/no-unknown-property */
 import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
-import style from "./navBar.module.css"
 import { LuShoppingBag } from "react-icons/lu";
+import { useCart } from "../../Context/CartContext";
+import style from "./navBar.module.css"
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import Toggle from "../Toggle/Toggle";
-import { useCart } from "../../Context/CartContext";
 
 export default function NavBar() {
 
@@ -37,17 +34,16 @@ export default function NavBar() {
 
     return (
 
-
         <div className="nav flex flex-col justify-center items-start fixed z-[100]">
 
-            {/* //  First Nav */}
+            {/*  First Nav */}
 
             <div className={scrollNav ? "hidden bg-[#7c005b] dark:bg-[#003783] w-screen transition-all ease-in-out duration-1000" : "flex justify-center items-center bg-[#7c005b] dark:bg-[#003783] w-screen"} id="FNav">
                 <p className="flex justify-center items-center text-white mt-0 py-2.5">🥳 Free Shipping on orders over EGP 1500 🥳</p>
             </div>
             {/* ------------------------------------------------------------------------------------------------- */}
 
-            {/* //  Second Nav  mafee4 userToken */}
+            {/*   Second Nav  when there is no userToken */}
             {!userToken && <div className={scrollNav ? "w-screen navbar justify-between items-center bg-white dark:bg-dark shadow-lg" : "w-screen navbar justify-between items-center bg-white dark:bg-dark border-b dark:border-b-slate-800"}>
                 <div className=" flex bg-transparent">
                     <Link to={"/"} className="btn btn-ghost text-left md:text-center dark:text-white text-3xl text-[#240253] font-bold">Shopifya.</Link>
@@ -55,15 +51,9 @@ export default function NavBar() {
                 <DarkModeToggle />
             </div>}
 
-
-
-
-
-
             {userToken && <>
-                {/* //  Second Nav  lama wekon fe userToken */}
+                {/*   Second Nav  when there is userToken */}
                 <div className={scrollNav ? "hidden w-screen h-20 dark:bg-dark bg-white transition-all ease-in-out duration-1000" : "flex items-center justify-between w-screen h-20 border border-gray-100 dark:border-gray-800  dark:bg-dark bg-white"} id="SNav">
-
 
                     <div className="navbar-start flex items-center ms-5 bg-white dark:bg-dark">
 
@@ -95,7 +85,6 @@ export default function NavBar() {
                             </ul>
                         </div>}
 
-
                         {userToken && <form className={style.form}>
                             <button>
                                 <svg width={20} height={18} fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
@@ -115,18 +104,12 @@ export default function NavBar() {
                         </div>}
                     </div>
 
-
-
                     {userToken && <div className="navbar-center justify-center bg-transparent hidden md:flex">
                         <Link to={"/"} className="btn btn-ghost text-left md:text-center dark:text-white text-3xl text-[#240253] font-bold">Shopifya.</Link>
                     </div>}
 
-
-
                     {userToken && <div className={style.navBarEnd}>
-
                         <DarkModeToggle />
-
                         {userToken && <>
                             <Link to={"/cart"} className="btn-ghost dark:btn-ghost p-3 rounded-full flex justify-center font-bold items-center relative mt-2 ">
                                 <LuShoppingBag className="indicator text-2xl text-[#240253]  dark:text-white" />
@@ -156,7 +139,6 @@ export default function NavBar() {
                             <button
                                 className="dropdown dropdown-end dark:text-white  rounded-full p-0"
                             >
-
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle me-2 text-[#240253] bg-white dark:btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" className="text-[#240253] fill-[#240253] dark:fill-white"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path></svg></div>
                                 <ul tabIndex={0} className="menu dropdown-content bg-base-100x bg-body border-transparent hover:border-white rounded-lg z-[1] w-52 shadow dark:bg-slate-700 text-left mt-3 p-0">
                                     <li className=" dark:hover:bg-slate-700 hover:rounded-lg text-left w-full group pb-1">
@@ -182,34 +164,10 @@ export default function NavBar() {
                     }
                 </div>
 
-
-
-
-
                 {/* ------------------------------------------------------------------------------------------------- */}
-
-
-                {/* // Third Nav */}
+                {/* Third Nav */}
                 <div className="w-screen">
-
-
-
                     {userToken && <div className={scrollNav ? "navbar justify-between w-screen dark:bg-gray-900 bg-[#F4F6F8] py-2 flex items-center shadow-lg z-[100]" : "navbar justify-between w-screen dark:bg-gray-900 bg-[#F4F6F8] py-2 hidden md:flex items-center border-b-2 dark:border-dark z-[100]"}>
-
-                        {/* {userToken && <form className={scrollNav ? style.form : "hidden"}>
-                            <button>
-                                <svg width={20} height={18} fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" strokeWidth="1.333" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                            <input className="text-base bg-transparent shadow-none w-96 h-full p-2 border-none text-[#240253] focus:outline-none focus:w-96 xs:hidden xl:block focus:border-none" placeholder="Search..." required type="search" />
-                            <button className="reset rounded-full" type="reset">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 invisible focus:visible z-[60]">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-
-                            </button>
-                        </form>} */}
                         <div className="navbar-start">
                             {userToken && <div className={scrollNav ? "dropdown z-[65] flex md:hidden" : "hidden"}>
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

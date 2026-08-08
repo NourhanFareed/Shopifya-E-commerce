@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
 import { addProductToCart } from "../../cartServices";
 import { useWishList } from "../../Context/wishlistContext";
@@ -17,29 +15,6 @@ export default function WishListProducts({ product, index }) {
         console.log(response)
     }
 
-    // async function removeProductFromWishList(productId) {
-    //     let { data } = await axios.delete("https://ecommerce.routemisr.com/api/v1/wishlist/" + productId, {
-    //         headers: {
-    //             token: localStorage.getItem("token")
-    //         }
-    //     })
-    //     console.log(data);
-    //     toast.success("Product removed successfully from the wishlist", {
-    //         position: "bottom-right",
-    //         autoClose: 3000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "light",
-    // pauseOnFocusLoss: false,
-    //         transition: Bounce,
-    //     });
-
-    // }
-
-
     return (
 
         <>
@@ -51,8 +26,7 @@ export default function WishListProducts({ product, index }) {
                         <Link to={"/productDetails/" + product?._id}>
                             <img className="w-full h-full group-hover:scale-110 transition duration-700" src={product?.imageCover} alt={product?.title} />
                         </Link>
-                        {/* <div className="absolute rotate-90 top-3 -right-2  bg-red-500 text-white px-4 py-1 mx-auto z-[70] rounded-none text-sm font-medium">SALE
-                    </div> */}
+                       
                     </div>
                     <div className="p-4">
                         <Link to={"/productDetails/" + product?._id}>

@@ -1,11 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-
 import Slider from "react-slick"
-
-
-
-
 
 export default function ProductSlider({ images, title }) {
 
@@ -30,8 +23,6 @@ export default function ProductSlider({ images, title }) {
                 </Slider>
             </div>
         </div>
-
-
 
     )
 }

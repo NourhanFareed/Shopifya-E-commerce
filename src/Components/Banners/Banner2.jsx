@@ -1,5 +1,3 @@
-
-
 import furniture1 from "../../assets/images/banner10_img1.png"
 import furniture2 from "../../assets/images/banner10_img2.png"
 import furniture3 from "../../assets/images/banner10_img3.png"
@@ -32,8 +30,6 @@ export default function Banner2() {
 
             </div>
         </div>
-
-
     );
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
@@ -43,8 +42,6 @@ export default function OffersDetails() {
 
         setIsLoading(false)
     }
-
-
 
     return (
         <>
@@ -108,9 +105,6 @@ export default function OffersDetails() {
                 </div>
 
             }
-
-
-
         </>
     )
 }

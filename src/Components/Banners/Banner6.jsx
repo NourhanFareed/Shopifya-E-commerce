@@ -33,8 +33,6 @@ export default function Banner6() {
                 </div>
 
             </div>
-
-
         </>
     )
 }

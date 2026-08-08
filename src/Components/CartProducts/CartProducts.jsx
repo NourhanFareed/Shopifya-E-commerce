@@ -1,8 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable react/prop-types */
-
-// import axios from "axios";
 import { RiCloseLine } from "react-icons/ri"
 import { useState } from "react";
 import { useCart } from "../../Context/CartContext";
@@ -14,28 +9,6 @@ export default function CartProducts({ product, index }) {
     const { removeProductFromCart, setCartProducts, updateProductInCart, cartProductsCounter } = useCart();
 
 
-
-    // async function removeProductFromCart(productId) {
-    //     let { data } = await axios.delete("https://ecommerce.routemisr.com/api/v1/cart/" + productId, {
-    //         headers: {
-    //             token: localStorage.getItem("token")
-    //         }
-    //     })
-    //     console.log(data);
-    //     cartProducts(data);
-    //     toast.success("Product removed successfully from the cart", {
-    //         position: "bottom-right",
-    //         autoClose: 3000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "light",
-    //         transition: Bounce,
-    //     });
-
-    // }
     const handleRemoveFromCart = async (productId) => {
         let response = await removeProductFromCart(productId);
         console.log(response)
@@ -46,26 +19,6 @@ export default function CartProducts({ product, index }) {
         console.log(response)
         setIsLoadingIcon(false)
     }
-
-
-    // async function updateProductInCart(productId, count) {
-    //     setIsLoadingIcon(true)
-    //     if (count != 0) {
-    //         let { data } = await axios.put("https://ecommerce.routemisr.com/api/v1/cart/" + productId, {
-    //             count
-    //         }, {
-    //             headers: {
-    //                 token: localStorage.getItem("token")
-    //             }
-    //         })
-    //         console.log(data);
-    //         setCartProducts(data);
-    //         setProductCount(product.count)
-    //     }
-    //     setIsLoadingIcon(false)
-    // }
-
-
 
 
     return (

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Slider from "react-slick";
 import Banner1 from "./Banner1";
 import Banner2 from "./Banner2";
@@ -97,4 +96,3 @@ export default function Banners() {
         </div>
     )
 }
-// className="w-full h-[650px] rounded-3xl"

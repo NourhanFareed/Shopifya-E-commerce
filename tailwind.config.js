@@ -21,15 +21,12 @@ export default {
         info: "#2196f3",
         nav: "#ee4036",
         body: "#fff5f2",
-
       },
       boxShadow: {
         "3xl": "inset 2px 5px 10px rgb(5, 5, 5)",
         "4xl": "inset 2px 2px 10px #717788",
       },
-      backgroundImage: {
-      
-      },
+      backgroundImage: {},
     },
   },
   plugins: [

@@ -1,17 +1,9 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-constant-condition */
 import { useEffect } from "react"
 import localStorage from "use-local-storage"
 
-
-
 export default function DarkModeToggle() {
 
-    // const [mode, setMode] = useState(localStorage.getItem("theme") ?? "light");
     const [mode, setMode] = localStorage("mode" ? "dark" : "light");
-
-
     useEffect(() => {
         if (mode === "dark") {
             document.documentElement.classList.add("dark");
@@ -25,10 +17,6 @@ export default function DarkModeToggle() {
     const handleModeSwitch = () => {
         setMode(mode === "dark" ? "light" : "dark");
     }
-
-
-
-
 
     return (
         <div className="flex justify-end items-center mt-2">
@@ -44,12 +32,5 @@ export default function DarkModeToggle() {
             </div>
 
         </div>
-
-
-
-
-
-
-
     )
 }

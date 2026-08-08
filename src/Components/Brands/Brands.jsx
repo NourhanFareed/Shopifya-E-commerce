@@ -1,11 +1,9 @@
-/* eslint-disable react/prop-types */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import ScrollingUpIcon from "../ScrollingUpIcon/ScrollingUpIcon";
 import { Helmet } from "react-helmet";
-
 
 
 export default function Brands() {
@@ -17,7 +15,6 @@ export default function Brands() {
     getBrands()
   }, [])
 
-
   async function getBrands() {
     setIsLoading(true)
     let { data } = await axios.get("https://ecommerce.routemisr.com/api/v1/brands")
@@ -26,8 +23,6 @@ export default function Brands() {
     setIsLoading(false)
 
   }
-
-
 
   return (
     <>
@@ -56,9 +51,6 @@ export default function Brands() {
         </div>}
 
     </>
-
-
-
   )
 }
 

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-// import { useState } from "react";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 import { Helmet } from "react-helmet";
 import ScrollingUpIcon from "../ScrollingUpIcon/ScrollingUpIcon";
@@ -12,7 +10,6 @@ import { useWishList } from "../../Context/wishlistContext";
 
 export default function Offers() {
     const [isLoading, setIsLoading] = useState(true)
-
     const { addProductToWishList, productIdIcon } = useWishList()
     const { addProductToCart } = useCart()
     const [offers, setOffers] = useState()
@@ -58,7 +55,6 @@ export default function Offers() {
             {isLoading ? <LoadingScreen />
                 :
                 <div>
-                    {/* <h1>Offers</h1> */}
 
                     <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto xs:px-3 xs:ms-5 sm:ms-36 md:ms-0 md:px-10 gap-14 bg-body dark:bg-dark">
                         {offers?.slice(1, 48).map((product, index) => {

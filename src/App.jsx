@@ -47,7 +47,7 @@ function App() {
         { path: 'productDetails/:id', element: <ProtectedRoute><ProductDetails /></ProtectedRoute> },
         { path: 'offerDetails/:id', element: <ProtectedRoute><OffersDetails /></ProtectedRoute> },
         { path: 'shippingAddress/:cartId', element: <ProtectedRoute><ShippingAddress /></ProtectedRoute> },
-        { path: 'allorders', element: <ProtectedRoute><Orders /></ProtectedRoute> },
+        { path: 'allOrders', element: <ProtectedRoute><Orders /></ProtectedRoute> },
         { path: 'clientsReviews', element: <ProtectedRoute><ClientsReviews /></ProtectedRoute> },
         { path: 'contactUs', element: <ProtectedRoute><ContactUs /></ProtectedRoute> },
         { path: 'register', element: <ProtectAuthRoutes><Register /></ProtectAuthRoutes> },

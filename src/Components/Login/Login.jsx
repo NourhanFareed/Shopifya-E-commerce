@@ -1,15 +1,13 @@
-
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { AuthContext } from '../../Context/AuthContext';
-import style from './login.module.css';
 import { Helmet } from 'react-helmet';
+import style from './login.module.css';
 
 export default function Login() {
-
   const [isLoading, setIsLoading] = useState(false)
   const [errorMsg, setErrorMsg] = useState("")
   const [succussMsg, setSuccussMsg] = useState("")
@@ -46,8 +44,6 @@ export default function Login() {
         navigate(location.pathname);
       }
 
-
-
     }).catch((errors) => {
       setIsLoading(false);
       console.log(errors.response.data.message);
@@ -62,7 +58,6 @@ export default function Login() {
     validationSchema
 
   });
-
 
   return (
     <>
@@ -105,11 +100,6 @@ export default function Login() {
         </div>
 
       </div>
-
-
-
-
-
 
     </>
   )

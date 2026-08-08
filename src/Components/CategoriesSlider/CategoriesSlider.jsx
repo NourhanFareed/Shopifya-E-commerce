@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import style from "../CategoriesSlider/CategoriesSlider.module.css";
@@ -30,7 +28,6 @@ export default function CategoriesSlider({ categories }) {
             />
         );
     }
-
 
     const settings = {
         dots: true,
@@ -93,12 +90,3 @@ export default function CategoriesSlider({ categories }) {
         </div>
     )
 }
-
-{/* <div className="bg-white rounded-3xl overflow-hidden w-fit ring-opacity-40 max-w-sm group relative">
-    <div className="relative overflow-hidden w-fit">
-        <Link to={"/productDetails/" + product?._id}>
-            <img className="w-full h-full group-hover:scale-110 shadow-lg rounded-lg transition duration-700" src={product?.imageCover} alt={product?.title} />
-        </Link>
-    </div>
-
-</div> */}

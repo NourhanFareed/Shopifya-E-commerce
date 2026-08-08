@@ -1,5 +1,3 @@
-
-
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useContext, useState } from 'react';
@@ -69,9 +67,7 @@ export default function ResetPassword() {
 
     });
 
-
-
-    return (
+return (
         <>
 
             <Helmet>
@@ -82,8 +78,6 @@ export default function ResetPassword() {
                 <div className={style.formContainer}>
                     <form onSubmit={handleSubmit} className="w-full flex flex-col p-10 rounded-2xl gap-4 bg-body dark:bg-dark">
                         <h1 id="heading" className="text-xl pt-0 pb-1 font-bold dark:text-white text-[#240253] text-center">Reset Password</h1>
-
-                        {/* <p className='text-center pt-0 pb-4 font-bold dark:text-white text-[#240253]'></p> */}
 
                         <div className="flex justify-center items-center flex-col w-full ">
                             <div className="field my-2 w-full bg-body shadow-4xl dark:shadow-3xl dark:bg-dark pt-2">
@@ -116,11 +110,6 @@ export default function ResetPassword() {
                 </div>
 
             </div>
-
-
-
-
-
 
         </>
     )

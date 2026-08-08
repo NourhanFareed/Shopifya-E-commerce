@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import CardDesign from "../CardDesign/CardDesign";
 import axios from "axios";

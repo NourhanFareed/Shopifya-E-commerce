@@ -1,6 +1,5 @@
 import chair from "../../assets/images/chair.png"
 
-
 export default function Banner5() {
     return (
         <div className="lg:max-w-[1440px] md:max-w-[800px] max-w-[375px] mx-auto py-0 px-0 xl:px-0 flex justify-center items-center flex-col">
